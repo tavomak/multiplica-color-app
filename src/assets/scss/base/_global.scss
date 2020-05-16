@@ -1,3 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
 body {
   height: 100vh;
+  background: radial-gradient(White 45%, #e6e6e6 75%);
+  color: $medium-grey;
+  line-height: 1.2;
+}
+ul{
+  list-style-type: none;
+  padding-left: 0;
 }

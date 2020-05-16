@@ -5,35 +5,20 @@ $display-font: 'Permanent Marker', cursive;
 $font-light: 300;
 $font-regular: 400;
 $font-bold: 600;
-$font-extra-bold: 900;
 
 // Colores
 $palette: (
     ligth-grey: #DCDDE1,
-    ultra-ligth-grey: #F5F6FA,
-    medium-grey: #697789,
-    brand-grey: #C4C1BA,
+    medium-grey: #747474,
     dark-grey: #121212,
     brand-primary-color: rgb(155, 19, 189), //#0a2240,
-    brand-secondary-color: #d2451e,
-    brand-tertiary-color: #e3e3e0,
-    brand-complementary-color: #7ca7ad,
-    brand-head-plantas: #e4e4e1,
-    brand-frm-plantas: #c3c0b7
 );
 $ligth-grey: map-get($palette,ligth-grey);
-$ultra-ligth-grey: map-get($palette,ultra-ligth-grey);
 $medium-grey: map-get($palette,medium-grey);
-$brand-grey: map-get($palette,brand-grey);
 $dark-grey: map-get($palette,dark-grey);
 $brand-primary-color: map-get($palette,brand-primary-color);
-$brand-secondary-color: map-get($palette,brand-secondary-color);
-$brand-tertiary-color: map-get($palette,brand-tertiary-color);
-$brand-complementary-color: map-get($palette,brand-complementary-color);
-$brand-frm-plantas: map-get($palette, brand-frm-plantas);
-$brand-head-plantas: map-get($palette, brand-head-plantas);
 $white:white;
 $black: black;
+
 //Gradientes
 // $gradient-yellow-green: linear-gradient(to right, $page-yellow, $brand-primary-color);
-// $gradient-red-yellow: linear-gradient(to right, $brand-red, $page-yellow);
