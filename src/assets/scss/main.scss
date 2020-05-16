@@ -1,0 +1,11 @@
+@import "utils/variables";
+@import "utils/functions";
+@import "utils/media";
+@import "utils/mixins";
+@import "utils/placeholders";
+
+@import "base/global";
+
+h1{
+  color: $brand-primary-color;
+}
