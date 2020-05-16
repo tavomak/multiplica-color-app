@@ -4,7 +4,9 @@ _Se han estandarizado los colores que se van a utilizar para todos los productos
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+_Maqueta del proyecto revisión de diseño: [Adobe XD](hhttps://xd.adobe.com/view/1230c4ca-b675-4246-724a-b954b9530c80-6401/)_
+
+_Deployment Domain [ZEIT NOW](https://multiplica-color-app.tavomak.now.sh/)_
 
 
 ### Instalación 🔧
