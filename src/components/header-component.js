@@ -1,19 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from '../assets/img/multiplica-logo.png';
-import next from '../assets/img/siguiente.png';
-
-function Article(props) {
-  return (
-    <section>
-      <h2>{props.title}</h2>
-      <p><em>Escrito por {props.author}</em></p>
-      <date>{props.date}</date>
-      <article>
-        {props.children}
-      </article>
-    </section>
-  )
-}
+import ButtoNextPrev from './button-nex-prev'
 
 
 const HeaderComponent = (props) => {
@@ -26,6 +13,9 @@ const HeaderComponent = (props) => {
         <li>
           <h2 className="font-weight-bolder mb-1">Multiplica Color App</h2>
           <p>Design and  Development : @tavomak</p>
+        </li>
+        <li className="ml-auto">
+          <ButtoNextPrev/>
         </li>
       </ul>
     </div>

@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
 function MyVerticallyCenteredModal(props) {
+  console.log(props)
     return (
       <Modal
         {...props}
@@ -9,7 +10,7 @@ function MyVerticallyCenteredModal(props) {
         aria-labelledby="contained-modal-title-vcenter"
         centered
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton style={{ background: props.color }}>
           <Modal.Title id="contained-modal-title-vcenter">
             Modal heading
           </Modal.Title>
@@ -23,7 +24,7 @@ function MyVerticallyCenteredModal(props) {
           </p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
+          <Button onClick={props.onHide}>Copiar código hex y cerrar</Button>
         </Modal.Footer>
       </Modal>
     );
@@ -35,7 +36,7 @@ function MyVerticallyCenteredModal(props) {
     return (
       <>
         <Button variant="primary" onClick={() => setModalShow(true)}>
-          Launch vertically centered modal
+          Ver más
         </Button>
   
         <MyVerticallyCenteredModal

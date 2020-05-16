@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Modal from '../../components/modal.js';
+
 
 class ColorCard extends Component {
 
     _renderColors() {
         const { dat } = this.props,
-            colors = Object.values(dat);
+        colors = Object.values(dat);
 
         //console.log(colors)
         return colors.map((v, i) => (
@@ -58,6 +60,9 @@ class ColorCard extends Component {
                                 </ul>
                             </li>
                         </ul>
+                    </div>
+                    <div className="card-footer">
+                        <Modal color={v.color}/>
                     </div>
                 </div>
             </div>

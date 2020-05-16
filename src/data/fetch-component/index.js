@@ -2,30 +2,34 @@ import React, { Component } from 'react';
 import ColorCard from './color-card'
 
 class FetchComponent extends Component {
-  //const GlobalStylesColors = Object.values(dat);
-  state = { dat: {}, GlobalStylesColors: {} }
-  
+  state = {
+      currentPage: '',
+      dat: {},
+      isLoading: false,
+    }
+
   componentDidMount() {
-    fetch('https://reqres.in/api/colors?page=2')
-    .then(res => res.json())
-    .then(data => {
-      const dat  = data.data;
-      this.setState({ dat });
-      
-      const globalColor = Object.values(dat);
+    this.setState({ isLoading: true });
 
-      const c = globalColor.map((k,v) => {
-        return k.color
+    fetch(`https://reqres.in/api/colors/${this.state.currentPage}`)
+      .then(res => res.json())
+      .then(data => {
+        const dat = data.data;
+        this.setState({ dat });
+        this.setState({ isLoading: false });
       })
-
-      this.setState({ GlobalStylesColors : c });
-
-    })
   }
-  
+
   render() {
+    const { isLoading } = this.state;
+
+    if (isLoading) {
+      return <p>Loading ...</p>;
+    }
     return (
-      <ColorCard dat={this.state.dat} />
+      <>
+        <ColorCard dat={this.state.dat} url={this.state.currentPage} />
+      </>
     )
   }
 
