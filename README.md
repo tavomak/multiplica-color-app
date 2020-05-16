@@ -33,7 +33,8 @@ NPM run build
 * [NPM](https://www.npmjs.com/) - Manejador de dependencias.
 * [Bootstrap](https://react-bootstrap.github.io/) - Usado para generar el Layout y el componente Modal.
 * [Sass](https://sass-lang.com/) - Framework CSS
-* [Sass](https://developer.mozilla.org/es/docs/Web/API/Fetch_API) - Fetch API
+* [FETCH](https://developer.mozilla.org/es/docs/Web/API/Fetch_API) - Fetch API
+* [ZEIT NOW](https://developer.mozilla.org/es/docs/Web/API/Fetch_API) - Deployment
 
 
 ## Versionado 📌
