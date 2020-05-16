@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../assets/img/multiplica-logo.png';
-import ButtoNextPrev from './button-nex-prev'
+import logo from '../../assets/img/multiplica-logo.png';
+import ButtoNextPrev from '../ButtonNexPrev'
 
 
 const HeaderComponent = (props) => {

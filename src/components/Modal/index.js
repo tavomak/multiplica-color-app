@@ -1,8 +1,13 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
-function MyVerticallyCenteredModal(props) {
-  console.log(props)
+function MyVerticallyCenteredModal({color, ...props}) {
+
+
+  const handleClick = (colorname) => {
+    props.onHide()
+  }
     return (
       <Modal
         {...props}
@@ -24,13 +29,15 @@ function MyVerticallyCenteredModal(props) {
           </p>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={props.onHide}>Copiar código hex y cerrar</Button>
+        <CopyToClipboard text={color}>
+        <Button onClick={() => handleClick(color)}>Copiar código hex y cerrar</Button>
+        </CopyToClipboard>
         </Modal.Footer>
       </Modal>
     );
   }
   
-  function ModalApp() {
+  function ModalApp({color}) {
     const [modalShow, setModalShow] = React.useState(false);
   
     return (
@@ -42,6 +49,7 @@ function MyVerticallyCenteredModal(props) {
         <MyVerticallyCenteredModal
           show={modalShow}
           onHide={() => setModalShow(false)}
+          color={color}
         />
       </>
     );

@@ -1,38 +1,27 @@
-import React, { Component } from 'react';
-import ColorCard from './color-card'
+import React from 'react';
+import ColorCard from './ColorCard'
+import { useFetchData } from '../../Context'
 
-class FetchComponent extends Component {
-  state = {
-      currentPage: '',
-      dat: {},
-      isLoading: false,
-    }
+const FetchComponent = () => {
+  const {
+    dataFetch,
+    isLoading
+  } = useFetchData()
 
-  componentDidMount() {
-    this.setState({ isLoading: true });
+  if (isLoading) return 'Loading'
 
-    fetch(`https://reqres.in/api/colors/${this.state.currentPage}`)
-      .then(res => res.json())
-      .then(data => {
-        const dat = data.data;
-        this.setState({ dat });
-        this.setState({ isLoading: false });
-      })
-  }
+  console.log(dataFetch)
 
-  render() {
-    const { isLoading } = this.state;
-
-    if (isLoading) {
-      return <p>Loading ...</p>;
-    }
-    return (
-      <>
-        <ColorCard dat={this.state.dat} url={this.state.currentPage} />
-      </>
-    )
-  }
-
+  return (
+    <>
+      {
+        dataFetch.data.map(d => (
+          <ColorCard key={d.id} color={d.color} year={d.year} name={d.name} pantone={d.pantone} />
+        ))
+      }
+    </>
+  )
 }
+
 
 export default FetchComponent
