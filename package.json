@@ -9,7 +9,8 @@
     "react-bootstrap": "^1.0.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-toastify": "^6.0.4"
   },
   "scripts": {
     "dev": "BROWSER=none react-scripts start",

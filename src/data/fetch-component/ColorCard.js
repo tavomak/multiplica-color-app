@@ -54,7 +54,7 @@ const ColorCard = ({ color, year, name, pantone }) => (
                 </ul>
             </div>
             <div className="card-footer">
-                <ModalApp color={color}/>
+                <ModalApp color={color} year={year} name={name} pantone={pantone} />
             </div>
         </div>
     </div>

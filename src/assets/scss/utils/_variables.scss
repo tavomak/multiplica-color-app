@@ -10,8 +10,8 @@ $font-bold: 600;
 $palette: (
     ligth-grey: #DCDDE1,
     medium-grey: #747474,
-    dark-grey: #121212,
-    brand-primary-color: rgb(155, 19, 189), //#0a2240,
+    dark-grey: rgb(131, 129, 127),
+    brand-primary-color: rgb(255, 81, 0), //#0a2240,
 );
 $ligth-grey: map-get($palette,ligth-grey);
 $medium-grey: map-get($palette,medium-grey);

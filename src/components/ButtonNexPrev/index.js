@@ -17,8 +17,7 @@ const ButtonNextPrev = () => {
       }
     return (
         <div>
-            <div>Página actual: {isPage}</div>
-            <button onClick={handleChangePage}>siguiente</button>
+            <button className={(isPage === 1) ? 'btn btn-secondary ico-next' : 'btn btn-secondary ico-prev'} onClick={handleChangePage}>{(isPage === 1) ? 'Siguiente' : 'Anterior'}</button>
         </div>
     )
 }
