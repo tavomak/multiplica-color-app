@@ -4,12 +4,12 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.5.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1",
+    "react-scripts": "5.0.1",
     "react-toastify": "^6.0.4"
   },
   "scripts": {
